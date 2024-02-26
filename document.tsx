@@ -8,25 +8,41 @@ import {
     StyleSheet,
     Font
 } from "@react-pdf/renderer";
-import { Chip } from "./components/Chip";
 import { Section } from "./components/Section";
-import { SectionEntry } from "./components/SectionEntry";
+import { SectionEntry, entryStyles } from "./components/SectionEntry";
 
 Font.register({
     family: "CenturyGothic",
     src: "./assets/fonts/CenturyGothic.ttf"
 });
+Font.register({
+    family: "CenturyGothic",
+    src: "./assets/fonts/GOTHICB.TTF",
+    fontWeight: "bold"
+});
+Font.register({
+    family: "CenturyGothic",
+    src: "./assets/fonts/GOTHICI.TTF",
+    fontStyle: "italic"
+});
+Font.registerHyphenationCallback(word => [word]);
 
 const styles = StyleSheet.create({
-    chipSet: {
-        display: "flex",
-        flexDirection: "row",
-        flexWrap: "wrap"
-    },
     body: {
         padding: 16,
-        fontSize: 16,
-        fontFamily: "CenturyGothic"
+        fontSize: 12,
+        fontFamily: "CenturyGothic",
+        color: "hsl(222, 15%, 17%)"
+    },
+    title: {
+        fontSize: 41,
+        fontWeight: "bold"
+    },
+    subtitle: {
+        fontSize: 19
+    },
+    description: {
+        fontSize: 13
     }
 });
 
@@ -47,18 +63,20 @@ export const pdfContent = (
                 }}
             >
                 <View>
-                    <Text>Adam Winnik</Text>
-                    <Text>Junior Web Developer</Text>
+                    <Text style={styles.title}>Adam Winnik</Text>
+                    <Text style={styles.subtitle}>
+                        Junior Software Engineer
+                    </Text>
                     <Text>Kamieniec Wrocławski, 55-002, Poland</Text>
                     <Text>789158411</Text>
                     <Text>adam.winnik120@gmail.com</Text>
                 </View>
                 <Image
-                    style={{ width: 200, borderRadius: 5 }}
+                    style={{ width: 150, borderRadius: 5 }}
                     src="assets/images/me.jpg"
                 />
             </View>
-            <Text>
+            <Text style={styles.description}>
                 Solution-focused Fullstack Web Developer with broad knowledge of
                 best software development practices and technologies. Able to
                 quickly learn new skills and adopt company practices. Aiming to
@@ -66,25 +84,27 @@ export const pdfContent = (
                 team collaboration.
             </Text>
             <Section title="Work History">
-                <SectionEntry indentNote={<Text>05-2022 - 03-2023</Text>}>
-                    <Text>Web Developer Intern</Text>
-                    <Text>Grid Dynamics, Wrocław, Dolnośląskie, Poland</Text>
-                    <Text>Worked in a SCRUM Agile development team</Text>
+                <SectionEntry indentNote="05-2022 - 03-2023">
+                    <Text style={entryStyles.title}>Web Developer Intern</Text>
+                    <Text style={entryStyles.subtitle}>
+                        Grid Dynamics, Wrocław, Dolnośląskie, Poland
+                    </Text>
+                    <Text>• Worked in a SCRUM Agile development team</Text>
                     <Text>
-                        Developed user interfaces with React and Angular
+                        • Developed user interfaces with React and Angular
                     </Text>
                     <Text>
-                        Developed testing code for web-based applications
+                        • Developed testing code for web-based applications
                     </Text>
                     <Text>
-                        Developed user-friendly web forms with validation and
+                        • Developed user-friendly web forms with validation and
                         error handling
                     </Text>
                 </SectionEntry>
             </Section>
             <Section title="Education">
-                <SectionEntry>
-                    <Text>
+                <SectionEntry indentNote="02-2024 - 06-2025">
+                    <Text style={entryStyles.title}>
                         Master of Science: Applicacation of Modern Information
                         Technologies
                     </Text>
@@ -93,8 +113,8 @@ export const pdfContent = (
                         Dolnośląskie, Poland
                     </Text>
                 </SectionEntry>
-                <SectionEntry>
-                    <Text>Bachelor of Science: Applied Computer Science</Text>
+                <SectionEntry indentNote="10-2020 - 01-2024">
+                    <Text style={entryStyles.title}>Bachelor of Science: Applied Computer Science</Text>
                     <Text>
                         Wrocław University of Science and Technology - Wrocław,
                         Dolnośląskie, Poland
@@ -123,21 +143,17 @@ export const pdfContent = (
             </Section>
             <Section title="Languages">
                 <SectionEntry>
-                <Text>• English - C1</Text>
-                <Text>• Polish - native</Text>
+                    <Text>• English - C1</Text>
+                    <Text>• Polish - native</Text>
                 </SectionEntry>
             </Section>
-            <Section title="Contact"></Section>
-            <View style={styles.chipSet}>
-                <Chip iconSrc="icons/haskell.png" title="React" />
-            </View>
-            <View>
+            {/* <View>
                 <Text style={{ fontSize: 12 }}>
                     I hereby give consent for my personal data to be processed
                     by [nazwa firmy] for the purpose of conducting recruitment
                     for the position for which I am applying.
                 </Text>
-            </View>
+            </View> */}
         </Page>
     </Document>
 );

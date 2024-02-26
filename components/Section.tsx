@@ -13,7 +13,7 @@ interface Props extends React.PropsWithChildren {
 }
 export const Section: React.FC<Props> = ({ title, children }) => (
     <View>
-        <Text style={{ fontSize: 24, borderBottom: "1px solid black" }}>
+        <Text style={{ fontSize: 19, fontWeight: "bold", borderBottom: "1px solid black" }}>
             {title}
         </Text>
         {children}
