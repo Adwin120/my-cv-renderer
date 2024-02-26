@@ -141,8 +141,7 @@ export const pdfContent = (
                     </Text>
                     <Text>Backend - RESTful API, Node.JS</Text>
                     <Text>Javascript Tooling - Webpack, Jest, Eslint</Text>
-                    <Text>Project Organization - Scrum Agile, Jira</Text>
-                    <Text>Reactive Programming with ReactiveX</Text>
+                    <Text>Project Organization - Scrum Agile, Jira, Git</Text>
                     <Text>System Administration - Linux, Bash</Text>
                     <Text>Object Oriented Programming - Java, Python, C#</Text>
                     <Text>Functional Programming - Elixir, Scala, Haskell</Text>
