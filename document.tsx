@@ -10,6 +10,7 @@ import {
 } from "@react-pdf/renderer";
 import { Section } from "./components/Section";
 import { SectionEntry, entryStyles } from "./components/SectionEntry";
+import { TextWithIcon } from "./components/Icon";
 
 Font.register({
     family: "CenturyGothic",
@@ -67,9 +68,16 @@ export const pdfContent = (
                     <Text style={styles.subtitle}>
                         Junior Software Engineer
                     </Text>
-                    <Text>Kamieniec Wrocławski, 55-002, Poland</Text>
-                    <Text>789158411</Text>
-                    <Text>adam.winnik120@gmail.com</Text>
+                    
+                    <TextWithIcon src="./assets/icons/baseline_place_black_24dp.png">
+                        Kamieniec Wrocławski, 55-002, Poland
+                    </TextWithIcon>
+                    <TextWithIcon src="./assets/icons/baseline_call_black_24dp.png">
+                        789158411
+                    </TextWithIcon>
+                    <TextWithIcon src="./assets/icons/baseline_email_black_24dp.png">
+                        adam.winnik120@gmail.com
+                    </TextWithIcon>
                 </View>
                 <Image
                     style={{ width: 150, borderRadius: 5 }}
@@ -114,7 +122,9 @@ export const pdfContent = (
                     </Text>
                 </SectionEntry>
                 <SectionEntry indentNote="10-2020 - 01-2024">
-                    <Text style={entryStyles.title}>Bachelor of Science: Applied Computer Science</Text>
+                    <Text style={entryStyles.title}>
+                        Bachelor of Science: Applied Computer Science
+                    </Text>
                     <Text>
                         Wrocław University of Science and Technology - Wrocław,
                         Dolnośląskie, Poland
