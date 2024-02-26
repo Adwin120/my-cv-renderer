@@ -10,7 +10,7 @@ import {
 } from "@react-pdf/renderer";
 import { Section } from "./components/Section";
 import { SectionEntry, entryStyles } from "./components/SectionEntry";
-import { TextWithIcon } from "./components/Icon";
+import { TextWithIcon } from "./components/TextWithIcon";
 
 Font.register({
     family: "CenturyGothic",
@@ -40,10 +40,12 @@ const styles = StyleSheet.create({
         fontWeight: "bold"
     },
     subtitle: {
-        fontSize: 19
+        fontSize: 19,
+        paddingBottom: 8
     },
     description: {
-        fontSize: 13
+        fontSize: 13,
+        paddingVertical: 8
     }
 });
 
@@ -72,15 +74,15 @@ export const pdfContent = (
                     <TextWithIcon src="./assets/icons/baseline_place_black_24dp.png">
                         Kamieniec Wrocławski, 55-002, Poland
                     </TextWithIcon>
-                    <TextWithIcon src="./assets/icons/baseline_call_black_24dp.png">
-                        789158411
-                    </TextWithIcon>
                     <TextWithIcon src="./assets/icons/baseline_email_black_24dp.png">
                         adam.winnik120@gmail.com
                     </TextWithIcon>
+                    <TextWithIcon src="./assets/icons/baseline_call_black_24dp.png">
+                        +48 789-158-411
+                    </TextWithIcon>
                 </View>
                 <Image
-                    style={{ width: 150, borderRadius: 5 }}
+                    style={{ width: 140, borderRadius: 5 }}
                     src="assets/images/me.jpg"
                 />
             </View>

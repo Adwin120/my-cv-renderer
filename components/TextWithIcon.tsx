@@ -7,7 +7,7 @@ interface Props extends PropsWithChildren {
 }
 export const TextWithIcon: React.FC<Props> = ({ src, size = 15, children }) => (
     <View style={{display: "flex", flexDirection: "row"}}>
-        <Image src={src} style={{ width: size, height: size }} />
+        <Image src={src} style={{ width: size, height: size, marginRight: 4 }} />
         <Text>{children}</Text>
     </View>
 );
