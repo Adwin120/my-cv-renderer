@@ -6,7 +6,8 @@ import {
     Document,
     Image,
     StyleSheet,
-    Font
+    Font,
+    Link
 } from "@react-pdf/renderer";
 import { Section } from "./components/Section";
 import { SectionEntry, entryStyles } from "./components/SectionEntry";
@@ -31,6 +32,7 @@ Font.registerHyphenationCallback(word => [word]);
 const styles = StyleSheet.create({
     body: {
         padding: 16,
+        paddingBottom: 0,
         fontSize: 12,
         fontFamily: "CenturyGothic",
         color: "hsl(222, 15%, 17%)"
@@ -46,6 +48,10 @@ const styles = StyleSheet.create({
     description: {
         fontSize: 13,
         paddingVertical: 8
+    },
+    contacts: {
+        display: "flex",
+        gap: 2
     }
 });
 
@@ -70,16 +76,23 @@ export const pdfContent = (
                     <Text style={styles.subtitle}>
                         Junior Software Engineer
                     </Text>
-                    
-                    <TextWithIcon src="./assets/icons/baseline_place_black_24dp.png">
-                        Kamieniec Wrocławski, 55-002, Poland
-                    </TextWithIcon>
-                    <TextWithIcon src="./assets/icons/baseline_email_black_24dp.png">
-                        adam.winnik120@gmail.com
-                    </TextWithIcon>
-                    <TextWithIcon src="./assets/icons/baseline_call_black_24dp.png">
-                        +48 789-158-411
-                    </TextWithIcon>
+
+                    <View style={styles.contacts}>
+                        <TextWithIcon src="./assets/icons/baseline_place_black_24dp.png">
+                            Kamieniec Wrocławski, 55-002, Poland
+                        </TextWithIcon>
+                        <TextWithIcon src="./assets/icons/baseline_email_black_24dp.png">
+                            adam.winnik120@gmail.com
+                        </TextWithIcon>
+                        <TextWithIcon src="./assets/icons/baseline_call_black_24dp.png">
+                            +48 789-158-411
+                        </TextWithIcon>
+                        <TextWithIcon src="./assets/icons/github.JPG">
+                            <Link src="https://github.com/Adwin120">
+                                Adwin120
+                            </Link>
+                        </TextWithIcon>
+                    </View>
                 </View>
                 <Image
                     style={{ width: 140, borderRadius: 5 }}
