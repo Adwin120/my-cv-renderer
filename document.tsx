@@ -76,13 +76,13 @@ export const pdfContent = (
 
                     <View style={styles.contacts}>
                         <TextWithIcon src="./assets/icons/baseline_place_black_24dp.png">
-                            Location: Wrocław, Poland
+                            Address: Wrocław, Poland
                         </TextWithIcon>
                         <TextWithIcon src="./assets/icons/baseline_email_black_24dp.png">
                             Email: adam.winnik120@gmail.com
                         </TextWithIcon>
                         <TextWithIcon src="./assets/icons/baseline_call_black_24dp.png">
-                            Phone: +48 789-158-411
+                            Phone: +48 789 158 411
                         </TextWithIcon>
                         <TextWithIcon src="./assets/icons/github.JPG">
                             Github: <Link src="https://github.com/Adwin120">
@@ -104,7 +104,7 @@ export const pdfContent = (
                 team collaboration.
             </Text>
             <Section title="Work History">
-                <SectionEntry indentNote="05-2022 - 03-2023">
+                <SectionEntry indentNote="05/2022 - 03/2023">
                     <Text style={entryStyles.title}>Web Developer Intern</Text>
                     <Text style={entryStyles.subtitle}>
                         Grid Dynamics, Wrocław, Dolnośląskie, Poland
@@ -123,7 +123,7 @@ export const pdfContent = (
                 </SectionEntry>
             </Section>
             <Section title="Education">
-                <SectionEntry indentNote="02.2024 - 06.2025">
+                <SectionEntry indentNote="02/2024 - 06/2025">
                     <Text style={entryStyles.title}>
                         Master of Science: Applicacation of Modern Information
                         Technologies
@@ -133,7 +133,7 @@ export const pdfContent = (
                         Dolnośląskie, Poland
                     </Text>
                 </SectionEntry>
-                <SectionEntry indentNote="10.2020 - 01.2024">
+                <SectionEntry indentNote="10/2020 - 01/2024">
                     <Text style={entryStyles.title}>
                         Bachelor of Science: Applied Computer Science
                     </Text>
