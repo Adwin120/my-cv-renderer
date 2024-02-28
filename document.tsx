@@ -168,13 +168,6 @@ export const pdfContent = (
                     <Text>• Polish - native</Text>
                 </SectionEntry>
             </Section>
-            {/* <View>
-                <Text style={{ fontSize: 12 }}>
-                    I hereby give consent for my personal data to be processed
-                    by [nazwa firmy] for the purpose of conducting recruitment
-                    for the position for which I am applying.
-                </Text>
-            </View> */}
         </Page>
     </Document>
 );

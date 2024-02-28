@@ -17,7 +17,8 @@ export const Section: React.FC<Props> = ({ title, children }) => (
             style={{
                 fontSize: 19,
                 fontWeight: "bold",
-                borderBottom: "1px solid black"
+                borderBottom: "1px solid black",
+                marginBottom: 4
             }}
         >
             {title}
