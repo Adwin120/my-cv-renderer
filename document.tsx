@@ -13,20 +13,16 @@ import { Section } from "./components/Section";
 import { SectionEntry, entryStyles } from "./components/SectionEntry";
 import { TextWithIcon } from "./components/TextWithIcon";
 
+
 Font.register({
-    family: "CenturyGothic",
-    src: "./assets/fonts/CenturyGothic.ttf"
-});
+    family: "Montserrat",
+    src: "./assets/fonts/Montserrat-Regular.ttf"
+})
 Font.register({
-    family: "CenturyGothic",
-    src: "./assets/fonts/GOTHICB.TTF",
+    family: "Montserrat",
+    src: "./assets/fonts/Montserrat-Bold.ttf",
     fontWeight: "bold"
-});
-Font.register({
-    family: "CenturyGothic",
-    src: "./assets/fonts/GOTHICI.TTF",
-    fontStyle: "italic"
-});
+})
 Font.registerHyphenationCallback(word => [word]);
 
 const styles = StyleSheet.create({
@@ -34,7 +30,7 @@ const styles = StyleSheet.create({
         padding: 16,
         paddingBottom: 0,
         fontSize: 12,
-        fontFamily: "CenturyGothic",
+        fontFamily: "Montserrat",
         color: "hsl(222, 15%, 17%)"
     },
     title: {
@@ -62,6 +58,7 @@ export const pdfContent = (
         subject="Curriculum Vitae"
         language="en-US"
         pageLayout="singlePage"
+        pdfVersion="1.7"
     >
         <Page style={styles.body}>
             <View
@@ -79,16 +76,16 @@ export const pdfContent = (
 
                     <View style={styles.contacts}>
                         <TextWithIcon src="./assets/icons/baseline_place_black_24dp.png">
-                            Kamieniec Wrocławski, 55-002, Poland
+                            Location: Wrocław, Poland
                         </TextWithIcon>
                         <TextWithIcon src="./assets/icons/baseline_email_black_24dp.png">
-                            adam.winnik120@gmail.com
+                            Email: adam.winnik120@gmail.com
                         </TextWithIcon>
                         <TextWithIcon src="./assets/icons/baseline_call_black_24dp.png">
-                            +48 789-158-411
+                            Phone: +48 789-158-411
                         </TextWithIcon>
                         <TextWithIcon src="./assets/icons/github.JPG">
-                            <Link src="https://github.com/Adwin120">
+                            Github: <Link src="https://github.com/Adwin120">
                                 Adwin120
                             </Link>
                         </TextWithIcon>
@@ -126,7 +123,7 @@ export const pdfContent = (
                 </SectionEntry>
             </Section>
             <Section title="Education">
-                <SectionEntry indentNote="02-2024 - 06-2025">
+                <SectionEntry indentNote="02.2024 - 06.2025">
                     <Text style={entryStyles.title}>
                         Master of Science: Applicacation of Modern Information
                         Technologies
@@ -136,7 +133,7 @@ export const pdfContent = (
                         Dolnośląskie, Poland
                     </Text>
                 </SectionEntry>
-                <SectionEntry indentNote="10-2020 - 01-2024">
+                <SectionEntry indentNote="10.2020 - 01.2024">
                     <Text style={entryStyles.title}>
                         Bachelor of Science: Applied Computer Science
                     </Text>
@@ -150,7 +147,7 @@ export const pdfContent = (
                 <SectionEntry>
                     <Text>
                         Web Development - HTML5, CSS3, ES6+, TS, React.JS,
-                        Angular
+                        Angular, Next.JS
                     </Text>
                     <Text>Backend - RESTful API, Node.JS</Text>
                     <Text>Javascript Tooling - Webpack, Jest, Eslint</Text>
