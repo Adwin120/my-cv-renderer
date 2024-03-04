@@ -86,7 +86,7 @@ export const pdfContent = (
                         </TextWithIcon>
                         <TextWithIcon src="./assets/icons/github.JPG">
                             Github: <Link src="https://github.com/Adwin120">
-                                Adwin120
+                                https://github.com/Adwin120
                             </Link>
                         </TextWithIcon>
                     </View>
