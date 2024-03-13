@@ -1,12 +1,5 @@
 import React from "react";
-import {
-    Page,
-    Text,
-    View,
-    Document,
-    Image,
-    StyleSheet
-} from "@react-pdf/renderer";
+import { Text, View } from "@react-pdf/renderer";
 
 interface Props extends React.PropsWithChildren {
     title: string;

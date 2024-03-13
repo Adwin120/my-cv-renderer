@@ -13,16 +13,15 @@ import { Section } from "./components/Section";
 import { SectionEntry, entryStyles } from "./components/SectionEntry";
 import { TextWithIcon } from "./components/TextWithIcon";
 
-
 Font.register({
     family: "Montserrat",
     src: "./assets/fonts/Montserrat-Regular.ttf"
-})
+});
 Font.register({
     family: "Montserrat",
     src: "./assets/fonts/Montserrat-Bold.ttf",
     fontWeight: "bold"
-})
+});
 Font.registerHyphenationCallback(word => [word]);
 
 const styles = StyleSheet.create({
@@ -85,7 +84,8 @@ export const pdfContent = (
                             Phone: +48 789 158 411
                         </TextWithIcon>
                         <TextWithIcon src="./assets/icons/github.JPG">
-                            Github: <Link src="https://github.com/Adwin120">
+                            Github:{" "}
+                            <Link src="https://github.com/Adwin120">
                                 Adwin120
                             </Link>
                         </TextWithIcon>
@@ -103,7 +103,7 @@ export const pdfContent = (
                 always maximize product maintainability to facilitate efficient
                 team collaboration.
             </Text>
-            <Section title="Work History">
+            <Section title="Work Experience">
                 <SectionEntry indentNote="05/2022 - 03/2023">
                     <Text style={entryStyles.title}>Web Developer Intern</Text>
                     <Text style={entryStyles.subtitle}>
@@ -114,7 +114,7 @@ export const pdfContent = (
                         • Developed user interfaces with React and Angular
                     </Text>
                     <Text>
-                        • Developed testing code for web-based applications
+                        • Implemented testing code for web-based applications
                     </Text>
                     <Text>
                         • Developed user-friendly web forms with validation and
@@ -146,11 +146,11 @@ export const pdfContent = (
             <Section title="Skills">
                 <SectionEntry>
                     <Text>
-                        Web Development - HTML5, CSS3, ES6+, TS, React.JS,
-                        Angular, Next.JS
+                        Web Development - HTML5, CSS3, ES6+, TS, React.js,
+                        Angular, Next.js
                     </Text>
-                    <Text>Backend - RESTful API, Node.JS</Text>
-                    <Text>Javascript Tooling - Webpack, Jest, Eslint</Text>
+                    <Text>Backend - RESTful API, Node.js</Text>
+                    <Text>Javascript Tooling - Webpack, Jest</Text>
                     <Text>Project Organization - Scrum Agile, Jira, Git</Text>
                     <Text>System Administration - Linux, Bash</Text>
                     <Text>Object Oriented Programming - Java, Python, C#</Text>
