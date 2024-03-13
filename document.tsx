@@ -84,9 +84,8 @@ export const pdfContent = (
                             Phone: +48 789 158 411
                         </TextWithIcon>
                         <TextWithIcon src="./assets/icons/github.JPG">
-                            Github:{" "}
-                            <Link src="https://github.com/Adwin120">
-                                Adwin120
+                            Github: <Link src="https://github.com/Adwin120">
+                                https://github.com/Adwin120
                             </Link>
                         </TextWithIcon>
                     </View>
