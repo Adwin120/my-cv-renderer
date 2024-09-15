@@ -7,47 +7,48 @@ import {
     Image,
     StyleSheet,
     Font,
-    Link
+    Link,
 } from "@react-pdf/renderer";
 import { Section } from "./components/Section";
 import { SectionEntry, entryStyles } from "./components/SectionEntry";
 import { TextWithIcon } from "./components/TextWithIcon";
+import { Bold } from "./components/Bold";
 
 Font.register({
     family: "Montserrat",
-    src: "./assets/fonts/Montserrat-Regular.ttf"
+    src: "./assets/fonts/Montserrat-Regular.ttf",
 });
 Font.register({
     family: "Montserrat",
     src: "./assets/fonts/Montserrat-Bold.ttf",
-    fontWeight: "bold"
+    fontWeight: "bold",
 });
-Font.registerHyphenationCallback(word => [word]);
+Font.registerHyphenationCallback((word) => [word]);
 
 const styles = StyleSheet.create({
     body: {
-        padding: 16,
+        padding: 15,
         paddingBottom: 0,
-        fontSize: 12,
+        fontSize: 11,
         fontFamily: "Montserrat",
-        color: "hsl(222, 15%, 17%)"
+        color: "hsl(222, 15%, 17%)",
     },
     title: {
-        fontSize: 41,
-        fontWeight: "bold"
+        fontSize: 30,
+        fontWeight: "bold",
     },
     subtitle: {
-        fontSize: 19,
-        paddingBottom: 8
+        fontSize: 16,
+        paddingBottom: 8,
     },
     description: {
-        fontSize: 13,
-        paddingVertical: 8
+        fontSize: 11,
+        paddingVertical: 8,
     },
     contacts: {
         display: "flex",
-        gap: 2
-    }
+        gap: 2,
+    },
 });
 
 export const pdfContent = (
@@ -64,7 +65,7 @@ export const pdfContent = (
                 style={{
                     display: "flex",
                     flexDirection: "row",
-                    justifyContent: "space-between"
+                    justifyContent: "space-between",
                 }}
             >
                 <View>
@@ -84,14 +85,15 @@ export const pdfContent = (
                             Phone: +48 789 158 411
                         </TextWithIcon>
                         <TextWithIcon src="./assets/icons/github.JPG">
-                            Github: <Link src="https://github.com/Adwin120">
+                            Github:{" "}
+                            <Link src="https://github.com/Adwin120">
                                 https://github.com/Adwin120
                             </Link>
                         </TextWithIcon>
                     </View>
                 </View>
                 <Image
-                    style={{ width: 140, borderRadius: 5 }}
+                    style={{ width: 120, borderRadius: 5 }}
                     src="assets/images/me.jpg"
                 />
             </View>
@@ -103,6 +105,27 @@ export const pdfContent = (
                 team collaboration.
             </Text>
             <Section title="Work Experience">
+                <SectionEntry indentNote="07/2024 - 09/2024">
+                    <Text style={entryStyles.title}>
+                        Enterprise Engineer Intern
+                    </Text>
+                    <Text style={entryStyles.subtitle}>
+                        Codelab.eu, Wrocław, Dolnośląskie, Poland
+                    </Text>
+                    <Text>
+                        • Reduced E2E tests duration by 30min and removed their
+                        flakiness
+                    </Text>
+                    <Text>
+                        • Automated processes by shell and cross-platform Node
+                        scripts
+                    </Text>
+                    <Text>
+                        • Worked on OAuth integrations, Nginx modules, Gitlab
+                        CI/CD orchestration
+                    </Text>
+                    <Text>• Maintained developing environment for Web applications</Text>
+                </SectionEntry>
                 <SectionEntry indentNote="05/2022 - 03/2023">
                     <Text style={entryStyles.title}>Web Developer Intern</Text>
                     <Text style={entryStyles.subtitle}>
@@ -124,7 +147,7 @@ export const pdfContent = (
             <Section title="Education">
                 <SectionEntry indentNote="02/2024 - 06/2025">
                     <Text style={entryStyles.title}>
-                        Master of Science: Applicacation of Modern Information
+                        Master of Science: Application of Modern Information
                         Technologies
                     </Text>
                     <Text>
@@ -145,20 +168,21 @@ export const pdfContent = (
             <Section title="Skills">
                 <SectionEntry>
                     <Text>
-                        Web Development - HTML5, CSS3, ES6+, TS, React.js,
+                        <Bold>Web Development</Bold> - HTML5, CSS3, ES6+, TS, React.js,
                         Angular, Next.js
                     </Text>
-                    <Text>Backend - RESTful API, Node.js</Text>
-                    <Text>Javascript Tooling - Webpack, Jest</Text>
-                    <Text>Project Organization - Scrum Agile, Jira, Git</Text>
-                    <Text>System Administration - Linux, Bash</Text>
-                    <Text>Object Oriented Programming - Java, Python, C#</Text>
-                    <Text>Functional Programming - Elixir, Scala, Haskell</Text>
+                    <Text><Bold>Backend</Bold> - RESTful API, Node.js, Java Spring</Text>
+                    <Text><Bold>Javascript Tooling</Bold> - Webpack, Jest, Vite</Text>
+                    <Text><Bold>Project Organization</Bold> - Scrum Agile, Jira, Git</Text>
+                    <Text><Bold>System Administration</Bold> - Linux, Bash</Text>
+                    <Text><Bold>Object Oriented Programming</Bold> - Java, Python, C#</Text>
+                    <Text><Bold>Functional Programming</Bold> - Elixir, Scala, Haskell</Text>
                     <Text>
-                        Databases - MySQL, Firestore, Database Design, Data
+                        <Bold>Databases</Bold> - MySQL, Firestore, Database Design, Data
                         Warehousing
                     </Text>
-                    <Text>Cloud Providers - Google Cloud Platform (GCP)</Text>
+                    <Text><Bold>Cloud Providers</Bold> - Google Cloud Platform (GCP)</Text>
+                    <Text><Bold>Testing/Integration</Bold> - Gitlab CI/CD, Cypress, Jest</Text>
                 </SectionEntry>
             </Section>
             <Section title="Languages">

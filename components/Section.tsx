@@ -8,10 +8,10 @@ export const Section: React.FC<Props> = ({ title, children }) => (
     <View>
         <Text
             style={{
-                fontSize: 19,
+                fontSize: 16,
                 fontWeight: "bold",
                 borderBottom: "1px solid black",
-                marginBottom: 4
+                marginBottom: 4,
             }}
         >
             {title}
