@@ -112,6 +112,7 @@ export const pdfContent = (
                     <Text style={entryStyles.subtitle}>
                         Codelab.eu, Wrocław, Dolnośląskie, Poland
                     </Text>
+                    <Text>• Maintained and worked on development environment for Web applications in Java Spring and Angular</Text>
                     <Text>
                         • Reduced E2E tests duration by 30min and removed their
                         flakiness
@@ -124,7 +125,6 @@ export const pdfContent = (
                         • Worked on OAuth integrations, Nginx modules, Gitlab
                         CI/CD orchestration
                     </Text>
-                    <Text>• Maintained developing environment for Web applications</Text>
                 </SectionEntry>
                 <SectionEntry indentNote="05/2022 - 03/2023">
                     <Text style={entryStyles.title}>Web Developer Intern</Text>
